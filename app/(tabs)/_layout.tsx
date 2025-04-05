@@ -50,7 +50,7 @@ const _layout = () => {
           backgroundColor: '#0f0D23',
           borderRadius: 50,
           marginHorizontal: 20,
-          marginBottom: 36,
+          marginBottom: 50,
           position: 'absolute',
           overflow: 'hidden',
           shadowColor: '#000',
@@ -58,6 +58,7 @@ const _layout = () => {
           shadowOpacity: 0.3,
           shadowRadius: 1.65,
           elevation: 8,
+          borderTopWidth: 0,
         },
       }}
     >
