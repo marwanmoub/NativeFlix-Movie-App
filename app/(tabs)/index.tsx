@@ -1,9 +1,12 @@
-import { Text, View } from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
-export default function Index() {
+const Home = () => {
   return (
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-5xl text-primary font-bold">Welcome</Text>
+    <View>
+      <Text>Welcome to the Home Page</Text>
     </View>
   );
-}
+};
+
+export default Home;
