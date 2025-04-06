@@ -17,7 +17,8 @@ export default defineConfig([
     },
     rules: {
       ...js.configs.recommended.rules,
-      'prettier/prettier': 'error',
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      'no-unused-vars': 'off',
     },
   },
   tseslint.configs.recommended,
