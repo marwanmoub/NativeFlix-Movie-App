@@ -6,9 +6,16 @@ import { icons } from '@/constants/icons';
 interface SearchBarProps {
   placeholder: string;
   onPress?: () => void;
+  value?: string;
+  onChangeText?: (text: string) => void;
 }
 
-const SearchBar = ({ onPress, placeholder }: SearchBarProps) => {
+const SearchBar = ({
+  onPress,
+  placeholder,
+  value,
+  onChangeText,
+}: SearchBarProps) => {
   //   const [value, setValue] = React.useState<string>('');
 
   return (
@@ -28,8 +35,8 @@ const SearchBar = ({ onPress, placeholder }: SearchBarProps) => {
       <TextInput
         onPress={onPress}
         placeholder={placeholder}
-        value=""
-        onChangeText={() => {}}
+        value={value}
+        onChangeText={onChangeText}
         placeholderTextColor="#a8b5db"
         className="flex-1 ml-3 text-white"
       />
