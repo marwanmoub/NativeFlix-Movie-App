@@ -94,3 +94,32 @@ export const updateSearchCount = async (
     throw err;
   }
 };
+
+export const getTrendingMovies = async (): Promise<
+  ActionResponse<TrendingMovie[] | null>
+> => {
+  try {
+    const trendingMovies = await database.listDocuments(
+      DATABASE_ID,
+      COLLECTION_ID,
+      [Query.limit(5), Query.orderDesc('count')],
+    );
+
+    if (!trendingMovies) {
+      return {
+        success: false,
+        data: null,
+        error: { message: 'Could not get trending movies' },
+      };
+    }
+
+    return {
+      success: true,
+      status: 200,
+      data: trendingMovies.documents as unknown as TrendingMovie[],
+    };
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
