@@ -19,7 +19,7 @@ const MovieCard = ({
   index,
 }: MovieParams) => {
   return (
-    <Link href={`/movies/${id}`}>
+    <Link href={`/movies/${id}`} asChild>
       <TouchableOpacity
         style={{ width: (Dimensions.get('window').width - 40 - 2 * 20) / 3 }}
         className="mr-2 relative"
